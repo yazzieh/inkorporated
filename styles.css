@@ -1,0 +1,562 @@
+@charset "utf-8";
+/* 
+Name: Yazmine Hoelscher
+Date: 2019-01-20
+Assignment: CIS155 Project V1
+Purpose: This file is written in css which will be used to style each html file that is a part of this project.
+*/
+/* HTML & Body Styles */
+/* 	Gradients supplemented by https://uigradients.com/#DeepSpace, a site shown to us in class by Prof G */
+html {
+	background: #000000;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+span{
+	font-size:0.75em;
+}
+body {
+	color: rgb(255,255,255);
+	color:#ffffff;
+	font-family: 'Raleway', sans-serif;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.15em;
+}
+body::after{
+	clear:both;
+	content:"";
+	display:table;
+}
+article{
+	background-color: white;
+	color: black;
+	width:100%;
+}
+article::after{
+	clear:both;
+	content:"";
+	display:table;
+}
+a[href]{
+	color:red;
+}
+a:hover{
+	text-shadow:red 3px 3px 2px;
+}
+p{
+	padding: 20px;
+	margin: 15px;
+}
+p#classicblurb{
+	width:75%;
+	display:block;
+	float:left;
+}
+p.blurb{
+	color: white;
+	background-color: black;
+	border-radius: 35px 35px;
+	padding: 5%;
+}
+p.blurb::after{
+	clear:both;
+	content:"";
+	display:table;
+}
+p#home{
+	color:black;
+	background-color:white;
+	quotes: "\201C" "\201D";
+}
+p#home::before{
+	content: open-quote;
+	font-family: 'Coiny', cursive;
+	font-size: 1.5em;
+}
+p#home::after{
+content: close-quote;
+	font-family: 'Coiny', cursive;
+	font-size: 1.5em;
+}
+p.classicstyles_p{
+	display: block;
+	width: 60%;
+	float:left;
+	padding: 0%;
+	margin-top:3%;
+	margin-left:2%;
+}
+p.subtext{
+	margin:auto;
+	padding:5%;
+}
+p.subtext, h4.subtext{
+	display:block;
+	width: 85%;
+	clear:right;
+}
+h4.subtext{
+	text-align:center;
+	padding-top:0%;
+	margin-top:0%;
+	width:100%;
+	padding:0%;
+	
+}
+/* Heading Styles */
+body>header>img{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+header{
+	width:100%;
+}
+/* Header Styles */
+header h1{
+	font-family: 'Permanent Marker', cursive;
+	font-size: 550%;
+	display:block;
+	float:left;
+	margin: 0px;
+	border: 0px;
+	line-height:80px;
+	max-width:100%;
+}
+article h2, article h2#homeheader{
+	font-size: 2em;
+	clear:both;
+}
+article h3{
+	font-size: 1.6em;
+	clear:both;
+}
+article h4{
+	font-size: 1.4em;
+	display:block;
+	float:left;
+	width:30%;
+}
+article h2, article h3, article h4, h2#homeheader {
+	color: white;
+	background-color: black;
+	font-family: 'Permanent Marker', cursive;
+	text-align: center;
+}
+h4#irezumi, h4#pe_a, h4#oldschool, h4#newschool{
+	clear:both;
+	margin-left: auto;
+	margin-right: auto;
+	width:100%;
+}	
+/* Navigation Styles */	
+nav>ul>li>a.current{
+	color:red;
+	text-decoration: line-through;
+}
+nav.sitenav li{
+	width:15%;
+	margin:1em;
+	margin-top:2em;
+	display:block;
+	padding:0.25em;
+	border:0.25em;
+}
+
+nav>ul>li>a{
+	text-decoration: none;
+	text-transform: uppercase;
+	color:white;
+}
+.historynav{
+	display:block;
+	width:15%;
+	padding-top:2%;
+	padding-bottom:2%;
+	float:left;
+	margin-left:1em;
+	margin-top:3em;
+}
+.historynav, nav.tattoonav{
+	background-color:black;
+	color:white;
+}
+nav.tattoonav{
+	float:left;
+	width: 20%;
+	padding:2%;
+	outline:1px solid white;
+	
+	
+}
+header nav>ul{
+	list-style-type:none;
+}
+article nav.historynav>ul>li>a:visited{
+	color:white;
+}
+article nav.historynav>ul>li>a:link{
+	color:white;
+}
+article nav.tattoonav>ul>li>a:visited{
+	color:white;
+}
+article nav.tattoonav>ul>li>a:link{
+	color:white;
+}
+header nav>ul>li>a:visited{ 
+color:white;
+}
+header nav>ul>li>a:link{
+	color:white;
+}
+header nav>ul>li>a:hover{
+	color:red;
+	text-shadow:red 3px 3px 2px;
+}
+article nav.historynav>ul>li>a:hover{
+	color: red;
+	text-shadow:red 3px 3px 2px;
+}
+article nav.tattoonav>ul>li>a:hover{
+	color: red;
+	text-shadow:red 3px 3px 2px;
+}
+/* List Styles */
+ul{
+	list-style-type: square;
+}
+ol.about_list{
+	padding: 17px;
+	margin: 10px;
+}
+/* Figure Styles */
+figure{
+	float:left;
+	clear:left;
+	display:block;
+	width:30%;
+	margin-left: 3%;
+	margin-bottom:2%;
+}
+figure#historyfig{
+	position:relative;
+	top:30px;
+}
+figure>img#tattoo_img{
+	width:75%;
+	border-radius:15px 15px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow:white 7px 3px 0px;
+	opacity:0.75;
+	-webkit-transform:translate(10px,10px);
+	transform:translate(10px,-10px);
+}
+figure>img#history_img{
+	width:95%;
+	border-radius: 15px 15px;
+	box-shadow:white 7px 3px 0px;
+	transform:translate(10px,-10px);
+}
+figure>img#irezumi_pic, figure>img#pe_a_pic, figure>img#oldschool_pic{
+	width:110%;
+}
+figure>img#newschool_pic{
+	width:110%;
+}
+figcaption#history_figcap, figcaption#tattoo_figcap{
+	color:white;
+	text-align:center;
+	font-size:0.75em;
+}	
+figcaption.example_figcap{
+	text-align: center;
+}
+/* IMG Styles */
+#oldschool_pic{
+	float:left;
+	clear:left;
+	display:block;
+	width:33%;
+	margin-left: 3%;
+	margin-bottom:2%;
+}
+#newschool_pic{
+	float:left;
+	clear:left;
+	display:block;
+	width:33%;
+	margin-left: 3%;
+	margin-bottom:2%;
+}
+#irezumi_pic:hover{
+	outline:black dotted;
+}
+#pe_a_pic:hover{
+	outline:black dotted;
+}
+#oldschool_pic:hover{
+	outline:black dotted;
+}
+#newschool_pic:hover{
+	outline:black dotted;
+}
+#prep_pic:hover{
+	outline:black dotted;
+}
+#aftercare_pic:hover{
+	outline:black dotted;
+}
+#history_img{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:35%;
+}
+/* DIV Styles */
+div.row{
+	float:left;
+	clear:both;
+}
+div.col-1-3{
+	width:33.33%;
+}
+div.col-1-4{
+	width:25%;
+}
+div.row::after{
+	clear:both;
+	content:"";
+	display:table;
+}
+div#commitdiv{
+	color: white;
+	background-color: black;
+	border-radius: 35px 35px;
+	padding: .5%;
+	width:95%;
+	margin:auto;
+}
+div#commitdiv::after{
+	clear:both;
+	content:"";
+	display:table;
+}
+div#commitdiv figure{
+	position:relative;
+	bottom:75px;
+}
+div[class^="col-"]{
+	float:left;
+}
+div img{
+	max-width:100%;
+}
+div#aftercare_p::after{
+	clear:both;
+	content:"";
+	display:table;
+}
+/* Footer Styles */
+footer{
+	clear:both;
+	text-align:center;
+	position:fixed;
+	bottom:0px;
+	background-color:black;
+	width:75%;
+	border-top:1px solid white;
+}
+/* Mobile Styles 0-480px */
+/* 	M5LO3 Use media queries to format a page differently for phones vs. PCs. (CSS, note where these are in your CSS and describe the overall impact they have on the site)
+	M5LO4 Use CSS for pull down menus (CSS)
+	- As demonstrated here, when the browser window is resized to a maximum width of 480 pixels (a smartphone size) the overall look of my website drastically changes. 
+	Images are now hidden, as well id navigation menus on specific pages, and extra information on my Tattoo 101 page.
+	I have also implemented a pulldown menu mechanic with the #hidden and #hidden2 divs on my Tattoo 101 page that allows the user to view the extra information when they are hovering over the section's h3 and p to keep the page shorter.*/
+@media only screen and (max-width:480px){
+	html{
+		background:black;
+	}
+	header img{
+		display:none;
+	}
+	body{
+		width:100%;
+	}
+	footer{
+		position:relative;
+		width:100%;
+	}
+	/* M5LO7 - this is where I used the flexbox container property flex-flow. 
+	Which in this case allows me to change the flow of the content within the "sitenav" class' unordered list to change into a column when at the browser size 480 pixels or smaller. 
+	Please note: I have elaborated on this objective further down this stylesheet under "Flex Styles".*/
+	.sitenav ul{
+		-webkit-flex-flow:column;
+		flex-flow:column;
+		clear:both;
+		align-items:center;
+		font-size:1em;
+	}
+	.sitenav ul>li{
+		padding:2%;
+		margin:0;
+		width:100%;
+		text-align:justify;
+		letter-spacing:0.5em;
+		border-top:0.5px solid white;
+	}
+	header h1{
+		font-size:345%;
+	}
+	#homeheader{
+		display:none;
+	}
+	.historynav, .tattoonav, figure, div>img, div>span, div#hidden, div#hidden2{
+		display:none;
+	}
+	
+	p{
+		padding:2%;
+	}
+	p.classicstyles_p{
+		display: block;
+		width:75%;
+		display:block;
+		float:left;
+		margin-left:9.5%;
+	}
+	div{
+		clear:both;
+		width:100%;
+	}
+	div.col-1-3{
+		width:100%;
+	}
+	div.col-1-4{
+		width:100%;
+	}
+	#pulldown1, #pulldown2{
+		margin:auto;
+		font-size:0.75em;
+	}
+	div#hidden, div#hidden2{
+		position:relative;
+	}
+	div#prepdiv:hover div#hidden, div#hidden:hover{
+		display:block;
+	}
+	#prep_p, #aftercare_p{
+		padding-bottom:0;
+		margin-bottom:0;
+		border-bottom:0;
+	}
+	.subtext{
+		background-color:black;
+		color:white;
+		width:100%;
+		border:1px solid white;
+	}
+	div#aftercarediv:hover div#hidden2, div#hidden2:hover{
+		display:block;
+	}
+	/* 	M5LO6 Demonstrate use of properties of flexbox items (CSS, document what flexbox item properties you use and their impacts, for one CSS selector using them)
+		- As shown here, I have used the flex-grow property on the home paragraph with an id of #home. This allows me to establish its growth rate in relation to the flex content on the rest of the page.
+		I have given it a growth factor of 3, which means that it will grow at three times the rate of the other flex content on the page (which are set at browser default).*/
+	p#home{
+		display:-webkit-flex;
+		display:flex;
+		-webkit-flex-flow:row wrap;
+		flex-flow:row wrap;
+		-webkit-flex-grow:3;
+		flex-grow:3;
+	}
+}
+/*PC Styles 481+px */
+@media only screen and (min-width:481px){
+	#pulldown1, #pulldown2{
+		display:none;
+	}
+}
+/*Flex Styles*/
+/* 	M5LO5 Demonstrate the use of flexboxes on a web page (CSS document where you use flexboxes; explain their impact on the page's layout; this can be a new page or a redo of an existing page)
+	M5LO7 Demonstrate use of properties of flexbox containers (CSS, document what flexbox container properties you use and their impacts, for one CSS selector using them)
+	- As you can see here, I have ruled that the unordered list within the class "sitenav" will be displayed as a flexbox. This means that this content is now in a "flexible box" 
+	which allows me to rule how it will grow or shrink depending on the content around it and the browser size.
+	This also means that the ul within the class "sitenav" is now a FLEX CONTAINER, meaning that everything nested within it will also be impacted by its flex rules.
+	I have not written anything in this particular rule in regards to a flexbox container property, but I will mark above where I did so. */
+	.sitenav ul{
+		list-style:none;
+		display:-webkit-flex;
+		display:flex;
+		
+	}
+/*	M6LO7 Demonstrate how to format a table with CSS (CSS, group your table styles together and note the overall impact they have on the HTML)
+	As shown here, these CSS rules are for the table on my website. I have a simple design, using mostly black and white to style the table so as to put an emphasis on the "table data" itself.
+	You may have noticed that in the HTML file, my table "has no data". This is because I decided to portray the data using color. Here, in my CSS I have created classes for however many columns the data spans.
+	As the table goes from Little Discomfort to Some Discomfort to Most Discomfort, I decided to use the colors green, yellow, and red. You might notice that the classes I have used are "g","gy", and "gyr". 
+	For a body part that only had Little Discomfort, I made the table cell with the class "g" have a background color of a solid green. For a body part that spanned multiple columns such as classes "gy" and "gyr",
+	I utilized a linear gradient as a backgorund image for the table cell.
+	Because I have listed so many body parts, I did not want to overwhelm the viewer's screen but I did still want the table to follow the flow of my website. Therefore I made the height relatively short, but long enough still to differentiate
+	between each body part's data. I really wanted to create a visual impact with this table. /*	
+/* Table Styles */
+table#painthreshold{
+	background:white;
+	border:1.75px solid black;
+	font-size:0.75em;
+	width:100%;
+	border-collapse:collapse;
+}
+table#painthreshold th{
+	border:1.75px solid black;
+}
+table#painthreshold td{
+	border:1.75px solid white;
+}
+table#painthreshold th, td{
+	height:1.6em;
+}
+td.gyr{
+	background-image: linear-gradient(to right, #a8eb12, #b9e200, #c8da00, #d4d100, #dfc800, #e5bc00, #eaaf00, #eea300, #ef8f00, #ef7a00, #ee6403, #eb4b12);
+}
+td.gy{
+	background-image: linear-gradient(to right, #a8eb12, #bfe000, #d1d400, #dfc800, #ebbc12);
+}
+td.g{
+	background-color:#a8eb12;
+}
+caption, table#painthreshold tfoot{
+	background:black;
+	color:white;
+	height:2em;
+}
+table#painthreshold tfoot{
+	font-size:1em;
+}
+caption{
+	font-family: 'Permanent Marker', cursive;
+	font-size:2em;
+}
+col#bodyparts{
+	width:10%;
+}
+col.painlevel{
+	width:30%;
+}
+tbody th{
+	text-align:right;
+}
+tfoot{
+	text-align:center;
+}
+
+
+
+
+
+
+
