@@ -1,8 +1,8 @@
 @charset "utf-8";
 /* 
 Name: Yazmine Hoelscher
-Date: 2019-01-20
-Assignment: CIS155 Project V1
+Date: 2019-03-03
+Assignment: CIS155 Project V4
 Purpose: This file is written in css which will be used to style each html file that is a part of this project.
 */
 /* HTML & Body Styles */
@@ -104,7 +104,14 @@ h4.subtext{
 	margin-top:0%;
 	width:100%;
 	padding:0%;
-	
+}
+.hblurb{
+	float:left;
+	width:50%;
+}
+.commitblurb{
+	float:left;
+	width:65%;
 }
 /* Heading Styles */
 body>header>img{
@@ -113,8 +120,12 @@ body>header>img{
 	margin-right: auto;
 	clear: both;
 }
+/* M8LO10 Demonstrate a CSS animation or transition (CSS, identify which is being done and its impact on the rendered HTML) 
+	- As shown here I have given the entire header element a transition style. I have given it the ease-in property, which means that elements within it will slowly enter the rendered view, 
+	and I've given it a duration of 2 seconds which means that the entirety of the transition will take 2 seconds to get to the end state. */
 header{
 	width:100%;
+	transition: ease-in 2s;
 }
 /* Header Styles */
 header h1{
@@ -187,11 +198,9 @@ nav>ul>li>a{
 }
 nav.tattoonav{
 	float:left;
-	width: 20%;
+	width: 50%;
 	padding:2%;
-	outline:1px solid white;
-	
-	
+	outline:1px solid white;	
 }
 header nav>ul{
 	list-style-type:none;
@@ -239,12 +248,9 @@ figure{
 	float:left;
 	clear:left;
 	display:block;
-	width:30%;
-	margin-left: 3%;
-	margin-bottom:2%;
+	width:25%;
 }
 figure#historyfig{
-	position:relative;
 	top:30px;
 }
 figure>img#tattoo_img{
@@ -334,13 +340,22 @@ div.row::after{
 	content:"";
 	display:table;
 }
-div#commitdiv{
+div#commitdiv, div#historydiv{
 	color: white;
 	background-color: black;
 	border-radius: 35px 35px;
 	padding: .5%;
 	width:95%;
 	margin:auto;
+}
+div#historydiv::after{
+	clear:both;
+	content:"";
+	display:table;
+}
+div#historydiv figure{
+	position:relative;
+	bottom:75px;
 }
 div#commitdiv::after{
 	clear:both;
@@ -373,11 +388,6 @@ footer{
 	border-top:1px solid white;
 }
 /* Mobile Styles 0-480px */
-/* 	M5LO3 Use media queries to format a page differently for phones vs. PCs. (CSS, note where these are in your CSS and describe the overall impact they have on the site)
-	M5LO4 Use CSS for pull down menus (CSS)
-	- As demonstrated here, when the browser window is resized to a maximum width of 480 pixels (a smartphone size) the overall look of my website drastically changes. 
-	Images are now hidden, as well id navigation menus on specific pages, and extra information on my Tattoo 101 page.
-	I have also implemented a pulldown menu mechanic with the #hidden and #hidden2 divs on my Tattoo 101 page that allows the user to view the extra information when they are hovering over the section's h3 and p to keep the page shorter.*/
 @media only screen and (max-width:480px){
 	html{
 		background:black;
@@ -392,9 +402,6 @@ footer{
 		position:relative;
 		width:100%;
 	}
-	/* M5LO7 - this is where I used the flexbox container property flex-flow. 
-	Which in this case allows me to change the flow of the content within the "sitenav" class' unordered list to change into a column when at the browser size 480 pixels or smaller. 
-	Please note: I have elaborated on this objective further down this stylesheet under "Flex Styles".*/
 	.sitenav ul{
 		-webkit-flex-flow:column;
 		flex-flow:column;
@@ -425,10 +432,9 @@ footer{
 	}
 	p.classicstyles_p{
 		display: block;
-		width:75%;
+		width:60%;
 		display:block;
 		float:left;
-		margin-left:9.5%;
 	}
 	div{
 		clear:both;
@@ -464,9 +470,6 @@ footer{
 	div#aftercarediv:hover div#hidden2, div#hidden2:hover{
 		display:block;
 	}
-	/* 	M5LO6 Demonstrate use of properties of flexbox items (CSS, document what flexbox item properties you use and their impacts, for one CSS selector using them)
-		- As shown here, I have used the flex-grow property on the home paragraph with an id of #home. This allows me to establish its growth rate in relation to the flex content on the rest of the page.
-		I have given it a growth factor of 3, which means that it will grow at three times the rate of the other flex content on the page (which are set at browser default).*/
 	p#home{
 		display:-webkit-flex;
 		display:flex;
@@ -483,26 +486,12 @@ footer{
 	}
 }
 /*Flex Styles*/
-/* 	M5LO5 Demonstrate the use of flexboxes on a web page (CSS document where you use flexboxes; explain their impact on the page's layout; this can be a new page or a redo of an existing page)
-	M5LO7 Demonstrate use of properties of flexbox containers (CSS, document what flexbox container properties you use and their impacts, for one CSS selector using them)
-	- As you can see here, I have ruled that the unordered list within the class "sitenav" will be displayed as a flexbox. This means that this content is now in a "flexible box" 
-	which allows me to rule how it will grow or shrink depending on the content around it and the browser size.
-	This also means that the ul within the class "sitenav" is now a FLEX CONTAINER, meaning that everything nested within it will also be impacted by its flex rules.
-	I have not written anything in this particular rule in regards to a flexbox container property, but I will mark above where I did so. */
 	.sitenav ul{
 		list-style:none;
 		display:-webkit-flex;
 		display:flex;
 		
-	}
-/*	M6LO7 Demonstrate how to format a table with CSS (CSS, group your table styles together and note the overall impact they have on the HTML)
-	As shown here, these CSS rules are for the table on my website. I have a simple design, using mostly black and white to style the table so as to put an emphasis on the "table data" itself.
-	You may have noticed that in the HTML file, my table "has no data". This is because I decided to portray the data using color. Here, in my CSS I have created classes for however many columns the data spans.
-	As the table goes from Little Discomfort to Some Discomfort to Most Discomfort, I decided to use the colors green, yellow, and red. You might notice that the classes I have used are "g","gy", and "gyr". 
-	For a body part that only had Little Discomfort, I made the table cell with the class "g" have a background color of a solid green. For a body part that spanned multiple columns such as classes "gy" and "gyr",
-	I utilized a linear gradient as a backgorund image for the table cell.
-	Because I have listed so many body parts, I did not want to overwhelm the viewer's screen but I did still want the table to follow the flow of my website. Therefore I made the height relatively short, but long enough still to differentiate
-	between each body part's data. I really wanted to create a visual impact with this table. /*	
+	}	
 /* Table Styles */
 table#painthreshold{
 	background:white;
@@ -553,10 +542,63 @@ tbody th{
 tfoot{
 	text-align:center;
 }
-
-
-
-
-
-
+/* Video Styles */
+/* M8LO12 Demonstrate how to format media with CSS (CSS, group your media styles together and describe their overall impact on the media feature of your page)
+	- I didn't want to go overly fancy with the styling for the clip of my tattoo on my About page. The only changes I made to the overall appearance of the video are mostly sizing and placement.
+	I made the width 20% so that it wouldn't be so large and tinkered with the border, margin, and padding for it to flow well with the rest of the elements.
+	I have also floated it to the right so that my paragraph text fits nicely between the image on the left and this video, on the right. */
+video{
+	display:block;
+	width:20%;
+	margin:1%;
+	float:right;
+	padding-right:2%;
+}
+iframe{
+	display:block;
+	padding:2%;
+	margin:auto;
+	background-color:black;
+	margin-bottom:2%;
+}
+/* About Me Styles */
+#yaz{
+	width:15%;
+	float:left;
+	margin:1%;
+}
+#yaz2{
+	width:100%;
+}
+#yazfig{
+	background-color:black;
+	width:15%;
+	float:left;
+	margin:1%;
+	outline:1px solid black;
+}
+#yazfig>figcaption{
+	color:white;
+	font-size:0.75em;
+	text-align:center;
+}
+#myself{
+	width:50%;
+	display:block;
+	float:left;
+	padding-left:2%;
+}
+#myself2{
+	width:50%;
+	display:block;
+	float:left;
+	padding-left:2%;
+	border-top:1px dotted black;
+}
+#yaz3{
+	width:20%;
+	float:right;
+	margin:1%;
+	padding-right:2%;
+}
 
