@@ -108,10 +108,12 @@ h4.subtext{
 .hblurb{
 	float:left;
 	width:50%;
+	display:block;
 }
 .commitblurb{
 	float:left;
 	width:65%;
+	display:block;
 }
 /* Heading Styles */
 body>header>img{
